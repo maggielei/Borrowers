@@ -1,0 +1,36 @@
+<form {{action "save" on="submit"}}>
+	<table>
+		<tbody>
+			<tr>
+				<td>First Name:</td>
+				<td>{{input value=model.firstName}}</td>
+			</tr>
+
+			<tr>
+				<td>Last Name:</td>
+				<td>{{input value=model.lastName}}</td>
+			</tr>
+
+			<tr>
+				<td>Email:</td>
+				<td>{{input value=model.email}}</td>
+			</tr>
+
+			<tr>
+				<td>Twitter:</td>
+				<td>{{input value=model.twitter}}</td>
+			</tr>
+
+			</tbody>
+		</table>
+		<p>Preview</p>
+		Name: {{model.firstName}} {{model.lastName}}<br />
+		Email: {{model.email}}<br />
+		Twitter: {{model.twitter}}<br />
+		{{input type="checkbox" name=trusted}}Trusted<br />
+	<input type="submit" value="Save" />
+	<button {{action "cancel"}}>Cancel</button>
+</form>
+
+
+
