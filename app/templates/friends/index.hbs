@@ -1,15 +1,11 @@
-<h1>Friends Index</h1>
-{{! The context here is the controller}}
-
-<h3>Total friends: {{model.length}}</h3>
-
+<h1>Total friends: {{model.length}}</h1>
 
 <ul>
 	{{#each friend in model}}
-		{{! 
-			Takes every element of the collection and sets it as a friend;
-			the collection returned is referenced as a model;
-		}}
-		<li>{{friend.id}}: {{friend.firstName}} {{friend.lastName}}</li>
+		<li>
+		{{#link-to 'friends.show' friend}}
+			{{friend.id}}: {{friend.firstName}} {{friend.lastName}}
+		{{/link-to}}
+		</li>
 	{{/each}}
 </ul>

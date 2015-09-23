@@ -1,6 +1,9 @@
 <form {{action "save" on="submit"}}>
+	<h2 style="color:red">{{errorMessage}}</h2>
+
 	<table>
 		<tbody>
+
 			<tr>
 				<td>First Name:</td>
 				<td>{{input value=model.firstName}}</td>
@@ -20,16 +23,21 @@
 				<td>Twitter:</td>
 				<td>{{input value=model.twitter}}</td>
 			</tr>
+			
+			<tr>
+				{{input type="checkbox" name=trusted}}Trusted
+			</tr>	
+		</tbody>
+	</table>
 
-			</tbody>
-		</table>
-		<p>Preview</p>
-		Name: {{model.firstName}} {{model.lastName}}<br />
-		Email: {{model.email}}<br />
-		Twitter: {{model.twitter}}<br />
-		{{input type="checkbox" name=trusted}}Trusted<br />
+	<br /><b>Preview:</b><br />
+	Name: {{model.firstName}} {{model.lastName}}<br />
+	Email: {{model.email}}<br />
+	Twitter: {{model.twitter}}<br /><br />
+
 	<input type="submit" value="Save" />
-	<button {{action "cancel"}}>Cancel</button>
+	<button {{action "cancel"}}>Back</button>
+
 </form>
 
 
