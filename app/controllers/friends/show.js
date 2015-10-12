@@ -6,6 +6,11 @@ export default Ember.Controller.extend({
 			this.transitionToRoute('friends');
 
 			return false;
+		},
+		edit: function(){
+			this.transitionToRoute('friends/edit');
+
+			return false;
 		}
 	}
 });
