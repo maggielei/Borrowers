@@ -31,13 +31,13 @@
 	</table>
 
 	<br /><b>Preview:</b><br />
-	Name: {{model.firstName}} {{model.lastName}}<br />
-	Email: {{model.email}}<br />
-	Twitter: {{model.twitter}}<br /><br />
+	<b>Name:</b> {{model.firstName}} {{model.lastName}}<br />
+	<b>Email:</b> {{model.email}}<br />
+	<b>Twitter:</b> {{model.twitter}}<br /><br />
 
 	<input type="submit" value="Save" />
 	<button {{action "cancel"}}>Back</button>
-
+	<button {{action "delete" model}}>Delete</button>
 </form>
 
 

@@ -1,12 +1,19 @@
 <h1>Total friends: {{model.length}}</h1>
 
-<ul>
-	{{#each friend in model}}
-		<li>
-		{{#link-to 'friends.show' friend}}
-			{{friend.id}}: {{friend.firstName}} {{friend.lastName}}
-		{{/link-to}}
-		</li>
-	{{/each}}
-</ul>
-
+<table>
+	<thead>
+		<tr>
+			<th>Name</th> 
+			<th></th>
+   		</tr>
+	</thead>
+	<tbody>
+    	{{#each friend in model}}
+		<tr>
+			<td>{{link-to friend.fullName "friends.show" friend}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+	
+<button>{{link-to "New" "friends.new" }}</button>
